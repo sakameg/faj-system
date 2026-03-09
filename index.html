@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -290,21 +291,16 @@ body { font-family: 'Noto Sans JP', sans-serif; background: var(--bg); color: va
       </div>
     </div>
     <div class="sb-group">
+      <div class="sb-group-label">ホーム</div>
       <div class="sb-item" data-page="dashboard"><div class="sb-dot"></div>ダッシュボード</div>
     </div>
     <div class="sb-group">
-      <div class="sb-group-label">PL</div>
-      <div class="sb-item" data-page="pl"><div class="sb-dot"></div>PL 全体</div>
-      <div class="sb-item" data-page="pl_tokyo"><div class="sb-dot"></div>PL 東京</div>
-      <div class="sb-item" data-page="pl_osaka"><div class="sb-dot"></div>PL 大阪</div>
-    </div>
-    <div class="sb-group">
-      <div class="sb-group-label">採用</div>
-      <div class="sb-item" data-page="recruit"><div class="sb-dot"></div>採用（AI 面談）</div>
-    </div>
-    <div class="sb-group">
-      <div class="sb-group-label">スタッフ</div>
+      <div class="sb-group-label">採用・スタッフ</div>
+      <div class="sb-item" data-page="recruit"><div class="sb-dot"></div>採用（AI面談）</div>
       <div class="sb-item" data-page="staff"><div class="sb-dot"></div>スタッフ一覧</div>
+    </div>
+    <div class="sb-group">
+      <div class="sb-group-label">研修</div>
       <div class="sb-item" data-page="training"><div class="sb-dot"></div>研修管理</div>
       <div class="sb-item" data-page="curriculum"><div class="sb-dot"></div>研修カリキュラム</div>
       <div class="sb-item" data-page="raise"><div class="sb-dot"></div>昇給制度</div>
@@ -339,7 +335,7 @@ body { font-family: 'Noto Sans JP', sans-serif; background: var(--bg); color: va
 // ============================================================
 // ★ 設定: GASデプロイURLをここに入力してください
 // ============================================================
-const GAS_URL = "YOUR_GAS_DEPLOY_URL_HERE";
+const GAS_URL = "https://script.google.com/macros/s/AKfycbzdmhSYnuTvZxcGN3QpKhB6PsujiAhaSpBGpxMlza1zSaTl4J1FBbzkjwQH3UL--GsD/exec";
 // 例: "https://script.google.com/macros/s/AKfycb.../exec"
 // ============================================================
 
@@ -782,9 +778,6 @@ const pageMap = {
   recruit:   renderRecruit,
   staff:     renderStaff,
   training:  renderTraining,
-  pl:         () => renderComingSoon("PL 全体"),
-  pl_tokyo:   () => renderComingSoon("PL 東京"),
-  pl_osaka:   () => renderComingSoon("PL 大阪"),
   curriculum: () => renderComingSoon("研修カリキュラム"),
   raise:     () => renderComingSoon("昇給制度"),
   account:   () => renderComingSoon("口座管理"),
